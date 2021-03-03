@@ -2,22 +2,23 @@
    A bank account has a balance and a mechanism for
    applying interest or fees at the end of the month.
 */
-
 public class BankAccount
 {
    private double balance;
+
    /**
       Constructs a bank account with zero balance.
    */
-   public BankAccount(double amount)
+   public BankAccount()
    {
-      balance = amount;
+      balance = 0;
    }
 
    /**
       Makes a deposit into this account.
       @param amount the amount of the deposit
-   */
+  
+   
    public void deposit(double amount)
    {
       balance = balance + amount;
@@ -28,6 +29,15 @@ public class BankAccount
       sufficient funds are not available.
       @param amount the amount of the withdrawal
    */
+   public void interest(double amount)
+   {
+	   balance = balance + amount * balance; 
+		
+   }
+   
+   
+   
+   
    public void withdraw(double amount)
    {
       balance = balance - amount;
