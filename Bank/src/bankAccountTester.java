@@ -4,55 +4,26 @@ public class bankAccountTester {
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-			
+		BankAccount myBankAccount = new BankAccount(balance, intPct);
 			System.out.println("Please enter your start balance ");
-			double startBal = in.nextDouble();
-			BankAccount myBankAccount = new BankAccount(startBal);
+			double balance = in.nextDouble();
+			System.out.println("Enter the interest rate for this account");
+			double intPct = in.nextDouble();
+			System.out.print("Enter amount to deposit:");
+			double x = in.nextDouble();
+			System.out.print("Enter amount to withdraw:");
+			double y = in.nextDouble();
 
-			System.out.println("Enter the interest rate for this account:");
-			double interestAmount = in.nextDouble();
-			BankAccount.interest(interestAmount);
 			
-			System.out.println ("How much would you like to deposit?");
-			double depositAmount = in.nextDouble();
-			myBankAccount.deposit(depositAmount);		
+			myBankAccount.deposit(x);
+			myBankAccount.withdraw(y);
+			myBankAccount.interest(intPct);
+			myBankAccount.getBalance();
+			//Also in tester this code:
+			System.out.println("If you would like to generate interest, enter yes:");
+			String answer = in.nextString;
+			if(answer == "yes") {
+			System.out.print("Interest:" + myBankAccount.interest(intPct));
+			}
+	}}
 			
-			
-			System.out.println("How much would you like to withdraw?");
-			double withDrawAmount = in.nextDouble();
-				if(withDrawAmount < myBankAccount):
-					System.out.println("InSufficient Funds to support withdrawal");
-				else();
-					System.out.ptintln("Your account balance is now:" + myBankAccount.getBalance());
-			myBankAccount.withdraw(withDrawAmount);
-			
-			System.out.println("How much would you like to withdraw?");
-			double withDrawAmount = in.nextDouble();
-				if(withDrawAmount < myBankAccount) {
-					System.out.println("InSufficient Funds to support withdrawal");
-				}
-					else(){
-					System.out.ptintln("Your account balance is now:" + myBankAccount.getBalance());
-					}
-					myBankAccount.withdraw(withDrawAmount);
-			
-			System.out.println("If you would like to generate interest, enter yes:")
-			String yesOrNo = in.nextDouble
-				if(yes == yes) {
-					System.out.print("Interest:" + get.interest());
-				}
-				else {
-					sytem.out.print ("okay"); 
-				}
-			
-			double finalBalance = myBankAccount
-			System.out.println("Your balance is now:" + myBankAccount.getBalance();
-			
-			
-			
-			
-			
-			
-	}
-
-}

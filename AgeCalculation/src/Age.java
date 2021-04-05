@@ -34,7 +34,7 @@ public class Age {
 		
 		if (days < 0) {
 			months--;
-			days = days + 30; }
+			days = days + 31; }
 		
 		
 		System.out.print("You are about: " + years +" years " + months + " months and " + days + " days old");

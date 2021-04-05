@@ -8,10 +8,14 @@ public class BankAccount
       balance = 0;
    }
 
-   public void interest(double amount)
+   public void interest(double intPct)
    {
 	   balance = balance + amount * balance; 
 		
+   }
+   
+   public void deposit(double amount) {
+	   balance = balance + amount;
    }
    
    
@@ -26,4 +30,7 @@ public class BankAccount
    {
       return balance;
    }
+   /*public double getInterest() {
+	   return interest;
+   }*/
 }
